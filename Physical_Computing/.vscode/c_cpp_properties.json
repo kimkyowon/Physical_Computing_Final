@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Project/Module_MCU(Arduino_Nano)_Child/sketch_may29a/src/lib/TinyGPS-master",
+                "C:/Program Files (x86)/Arduino/libraries/ModuleChild"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ]
+        }
+    ],
+    "version": 4
+}
