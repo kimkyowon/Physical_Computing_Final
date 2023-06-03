@@ -30,6 +30,8 @@ public:
     bool _gps_available;
     bool _get_valid_data;
 
+    char ReadData;
+
 private:
     float _c_lat, _c_lon;       
     unsigned long _c_age;

@@ -15,6 +15,7 @@ void Module_Child::check_gps_stat(){
 
 void Module_Child::update_position(){
     gps.f_get_position(&this->_c_lat,&this->_c_lon,&this->_c_age);
+    MySerial.write("warning");
 }
 void Module_Child::is_dangerous_location(){
     if(this->_c_lat < _SAFETY_LAT_MIN && this->_c_lat >  _SAFETY_LAT_MAX && this->_c_lon < _SAFETY_LON_MIN && this->_c_lat > _SAFETY_LON_MAX) this->_location_status = CHILD_IN_DANGEROUS_LOCATION;
@@ -38,6 +39,5 @@ void Module_Child::send_location_data(){
 }
 
 void Module_Child::clear_waring_process(){
-    this->_clear_dangerous = true;
-
+    if(this->ReadData == "Clear") this->_clear_dangerous = true;
 }
