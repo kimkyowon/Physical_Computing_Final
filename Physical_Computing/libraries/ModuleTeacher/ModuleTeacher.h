@@ -18,11 +18,13 @@ class Module_Teacher{
     void led_process();
     void buzzer_process();
 
+
     private:
     bool clear_signal;
-    int led_step;
-    int buzzer_step;  
-    
+    int _led_step;
+    int _buzzer_step;
+
+    char _ReadData;
 };
 
 class Child_Status{
