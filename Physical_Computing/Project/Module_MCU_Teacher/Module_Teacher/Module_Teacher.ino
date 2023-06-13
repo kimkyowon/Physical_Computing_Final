@@ -1,28 +1,24 @@
-#include <ModuleChild.h>
-#include <SoftwareSerial.h>
-
-SoftwareSerial MySerial(0,1,false); 
+#include "ModuleTeacher.h"
 
 Module_Teacher MyTeacherModule;
-Child_Status MyChild1Status;
+ezOutput led1(_PIN_LED);
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  MySerial.begin(9600);
-  pinMode(C_LED,OUTPUT);
-  pinMode(C_Buzzer,OUTPUT);
-
+  pinMode(_PIN_LED,OUTPUT);
+  pinMode(_PIN_WARNING_R,INPUT);
+  pinMode(_PIN_WARNING_W,OUTPUT);
+  pinMode(_PIN_WARNING_CLEAR_SW,INPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-
-}
-
-void serialEvent(){
-  while(MySerial.available()){
-    MyTeacherModule.ReadData = (char)Serial.read();
-    inputString += MyTeacherModule.ReadData;
-    if(MyTeacherModule.ReadData == '\n') stringComplete = true;
-  }
+  MyTeacherModule.check_warning_signal();
+  MyTeacherModule.check_warning_time();
+  MyTeacherModule.process_led();
+  MyTeacherModule.process_buzzer();
+  MyTeacherModule.process_switch1();
+  MyTeacherModule.process_switch2();
+  led1.loop();
 }
