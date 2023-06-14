@@ -1,8 +1,0 @@
-[부저 활용]
-https://gcmaker.tistory.com/31
-
-[LCD 패널 활용법]
-https://infoinno.tistory.com/41
-
-[Class Diagram]
-https://gmlwjd9405.github.io/2018/07/04/class-diagram.html

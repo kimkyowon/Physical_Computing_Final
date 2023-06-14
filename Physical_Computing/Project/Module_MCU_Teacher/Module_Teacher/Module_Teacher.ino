@@ -1,4 +1,4 @@
-#include "ModuleTeacher.h"
+#include <ModuleTeacher.h>
 
 Module_Teacher MyTeacherModule;
 ezOutput led1(_PIN_LED);
@@ -9,7 +9,9 @@ void setup() {
   pinMode(_PIN_LED,OUTPUT);
   pinMode(_PIN_WARNING_R,INPUT);
   pinMode(_PIN_WARNING_W,OUTPUT);
+  pinMode(_PIN_BUZZER,OUTPUT);
   pinMode(_PIN_WARNING_CLEAR_SW,INPUT);
+  pinMode(_PIN_BUZZER_ON_OFF_SW,INPUT);
 }
 
 void loop() {
