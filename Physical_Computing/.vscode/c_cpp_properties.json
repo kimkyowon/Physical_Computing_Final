@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/Project/Module_MCU(Arduino_Nano)_Child/sketch_may29a/src/lib/TinyGPS-master",
-                "C:/Program Files (x86)/Arduino/libraries/ModuleChild"
+                "C:/Program Files (x86)/Arduino/libraries/ModuleChild",
+                "C:/Program Files (x86)/Arduino/libraries/ModuleTeacher"
             ],
             "defines": [
                 "_DEBUG",
